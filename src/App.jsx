@@ -3,6 +3,7 @@ import './App.css'
 import TopNav from './Components/TopNav'
 import Navbar from './Components/Navbar'
 import Carousel from './Components/RestaurantsPage/Carousel'
+import Trend from './Components/Trend'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <TopNav/>
     <Navbar/>
     <Carousel/>
+    <Trend/>
     </>
   )
 }
