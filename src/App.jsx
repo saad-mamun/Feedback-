@@ -4,6 +4,7 @@ import TopNav from './Components/HomePage/TopNav'
 import Navbar from './Components/Navbar'
 import Carousel from './Components/HomePage/Carousel'
 import Trend from './Components/HomePage/Trend'
+import Footer from './Components/Footer'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Navbar/>
     <Carousel/>
     <Trend/>
+    <Footer/>
     </>
   )
 }
