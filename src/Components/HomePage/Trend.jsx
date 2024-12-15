@@ -77,6 +77,56 @@ function Trend() {
         },
     ]
 
+    const Activities = [
+        {
+            user: "public/User.png",
+            userName: "Leslie sakho",
+            location: "Canada, toronto",
+            ratting: "public/Ystar.png",
+            date: "09/11/2023",
+            desc1: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            desc2: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            image: {
+                img1: "public/Leslie1.png",
+                img2: "public/Leslie2.png",
+                img3: "public/Leslie3.png",
+            },
+            Discover: "Discover"
+
+        },
+        {
+            user: "public/User.png",
+            userName: "Chris macari",
+            location: "Singapour",
+            date: "09/11/2023",
+            ratting: "public/Ystar.png",
+            desc1: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            desc2: "The lorem ipsum is, in printing.",
+            image: {
+                img1: "public/Chris1.png",
+                img2: "public/Chris2.png",
+                img3: "public/Chirs3.png",
+            },
+            Discover: "Discover"
+
+        },
+        {
+            user: "public/User.png",
+            userName: "Jojo alba",
+            date: "28/09/2023",
+            location: "Kuala lumpur",
+            ratting: "public/Ystar.png",
+            desc1: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            desc2: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            image: {
+                img1: "public/Jojo1.png",
+                img2: "public/Jojo2.png",
+                img3: "public/Jojo3.png",
+            },
+            Discover: "Discover"
+
+        },
+    ]
 
 
 
@@ -128,11 +178,57 @@ function Trend() {
                         </button>
                     </div>
                     <div className='w-1/2'>
-                    <img src="public/Explore.png" alt="" />
+                        <img src="public/Explore.png" alt="" />
                     </div>
                 </div>
-                
             </div>
+
+            <div className='container mx-auto mt-14 mb-8'>
+                <h1 className='text-[#1E1E1E] text-[32px] font-bold'>Recents avtivities
+                </h1>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5'>
+                    {
+                        Activities.map((item, index) => (
+                            <div key={index} className='bg-[#F8F8F8] hover:bg-[#dbd3d3] p-4 rounded-xl transition delay-100 flex flex-col justify-between'>
+                                <div className='flex items-center gap-6 mb-4'>
+                                    <div className='p-4 rounded-full bg-white'>
+                                        <img className='' src={item.user} alt="User" />
+                                    </div>
+                                    <div>
+                                        <h2 className='text-[#232323] font-medium text-[21px]'>{item.userName}</h2>
+                                        <h2 className='text-[#8A8A8A]'>{item.location}</h2>
+                                    </div>
+                                </div>
+                                <div className='flex gap-10 mb-6'>
+                                    <div className='flex gap-[2px]'>
+                                        <img src={item.ratting} alt="rating" />
+                                        <img src={item.ratting} alt="rating" />
+                                        <img src={item.ratting} alt="rating" />
+                                        <img src={item.ratting} alt="rating" />
+                                        <img src={item.ratting} alt="rating" />
+                                    </div>
+                                    <p>{item.date}</p>
+                                </div>
+                                <p className='text-[#5E5E5E]' >{item.desc1}</p>
+                                <p className='text-[#5E5E5E] mt-3 mb-4' >{item.desc2}</p>
+                                <div className='flex gap-1 items-center max-w-[110px]'>
+                                    <img src={item.image.img1} alt="Active" />
+                                    <img src={item.image.img2} alt="Active" />
+                                    <img src={item.image.img3} alt="Active" />
+                                </div>
+                                <div>
+                                    <button className='font-semibold mt-3 border-b-2 border-black'>{item.Discover}</button>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div className=' mb-6'>
+                <hr />
+            </div>
+
         </section>
     )
 }
