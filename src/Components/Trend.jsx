@@ -25,55 +25,55 @@ function Trend() {
             image: "public/Bottegacard.png",
             title: "Bottega",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "public/Arabia.png",
             title: "Arabia Nights",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "public/Lokma.png",
             title: "Lokma",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "public/Thesnug.png",
             title: "The snug",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "Starbelly.png",
             title: "Starbelly",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "public/Lori.png",
             title: "Iori",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "public/Ngalley.png",
             title: "Ngalley",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "public/Diogonal.png",
             title: "diogonal",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
         {
             image: "public/Kitoko.png",
             title: "Kitoko",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-            view:"(253 reviews)"
+            view: "(253 reviews)"
         },
     ]
 
@@ -115,7 +115,22 @@ function Trend() {
                     <h1 className='text-[#1E1E1E] text-[22px] pb-3'>Discover more cool restaurants</h1>
                     <button className='py-2 px-6 bg-[#1677BD] hover:bg-[#1b85d1] text-white rounded-full transition cursor-pointer'>Show more</button>
                 </div>
+            </div>
 
+            <div className='bg-[#F2F2F2] pt-8 pb-8'>
+                <div className='md:w-[70%] mx-auto flex flex-col-reverse md:flex-row items-center gap-6'>
+                    <div className='w-1/2'>
+                        <h1 className='text-[#1E1E1E] text-[26px] max-w-[502px]'>MyFeedback for Business has resources to help you plan, start, grow, and advertise your small business</h1>
+                        <p className='max-w-[453px] mt-5 mb-8'>The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.
+                        </p>
+                        <button className='py-2 px-6 bg-[#1E1E1E] hover:bg-[#0d0d0d] text-white rounded-full transition'>
+                            Explore MyFeedback business
+                        </button>
+                    </div>
+                    <div className='w-1/2'>
+                    <img src="public/Explore.png" alt="" />
+                    </div>
+                </div>
                 
             </div>
         </section>
