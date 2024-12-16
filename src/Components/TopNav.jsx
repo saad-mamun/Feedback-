@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -7,9 +8,9 @@ function TopNav() {
         <section>
             <div className='container mx-auto flex justify-between items-center gap-4 px-4 mt-3 mb-3'>
                 <div className='hidden md:block' >
-                    <a href="">
+                    <NavLink to="/">
                         <img src="public/Myfeedback.png" alt="" />
-                    </a>
+                    </NavLink>
                 </div>
                 {/* Search section */}
                 <div>
@@ -27,7 +28,7 @@ function TopNav() {
                     <button className='bg-[#1E1E1E] text-white font-medium py-2 px-5 rounded-3xl hidden lg:block'>MyFeedback for business</button>
                 </div>
             </div>
-            <hr/>
+            <hr />
         </section>
     )
 }
