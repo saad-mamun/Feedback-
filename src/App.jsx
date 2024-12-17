@@ -5,6 +5,7 @@ import Footer from './Components/Footer'
 import TopNav from './Components/TopNav'
 import Home from './Components/HomePage/Home'
 import Restaurants from './Components/RestaurantsPage/Restaurants';
+import BellaItalia from './Components/BellaItaliaPage/BellaItalia';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Home/> } />
           <Route path='/restaurants' element={ <Restaurants/> } />
+          <Route path='/bellaItalia' element={ <BellaItalia/> } />
         </Routes>
         <Footer />
       </BrowserRouter>
