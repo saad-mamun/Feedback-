@@ -5,8 +5,20 @@ function Carousel() {
 
     const [currentIndex, setCurrentIndex] = useState(0)
 
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (
+            prevIndex === 0 ? SliderData.length - 1 : prevIndex - 1
+        ))
+    }
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (
+            prevIndex === SliderData.length - 1 ? 0 : prevIndex + 1
+        ))
+    }
+
     const CarouselItems = [
         {
+            id:1,
             image: "public/Bottega1.png",
             title: "Bottega",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
@@ -14,6 +26,7 @@ function Carousel() {
             Review: "(876 reviews)"
         },
         {
+            id:2,
             image: "public/Bottega2.png",
             title: "Bottega",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
@@ -21,6 +34,7 @@ function Carousel() {
             Review: "(876 reviews)"
         },
         {
+            id:3,
             image: "public/Bottega3.png",
             title: "Bottega",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
@@ -28,6 +42,39 @@ function Carousel() {
             Review: "(876 reviews)"
         },
         {
+            id:4,
+            image: "public/Bottega4.png",
+            title: "Bottega",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            Rating: 5.0,
+            Review: "(876 reviews)"
+        },
+        {
+            id:5,
+            image: "public/Bottega4.png",
+            title: "Bottega",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            Rating: 5.0,
+            Review: "(876 reviews)"
+        },
+        {
+            id:6,
+            image: "public/Bottega4.png",
+            title: "Bottega",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            Rating: 5.0,
+            Review: "(876 reviews)"
+        },
+        {
+            id:7,
+            image: "public/Bottega4.png",
+            title: "Bottega",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            Rating: 5.0,
+            Review: "(876 reviews)"
+        },
+        {
+            id:8,
             image: "public/Bottega4.png",
             title: "Bottega",
             desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
@@ -45,7 +92,7 @@ function Carousel() {
                 <div className=' flex items-center justify-center p-4'>
                     {/* Left Arrow */}
                     <div className='pb-16'>
-                        <button className=' bg-white p-2 rounded-full'>
+                        <button onClick={handlePrev} className=' bg-white p-2 rounded-full'>
                             <WestIcon />
                         </button>
                     </div>
@@ -76,7 +123,7 @@ function Carousel() {
                     </div>
                     {/* Right Arrow */}
                     <div className='pb-16'>
-                        <button className=' bg-white p-2 rounded-full'>
+                        <button onClick={handleNext} className=' bg-white p-2 rounded-full'>
                             <EastIcon />
                         </button>
                     </div>
