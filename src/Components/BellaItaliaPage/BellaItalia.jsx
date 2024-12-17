@@ -2,6 +2,7 @@ import { imageListClasses, Rating } from '@mui/material'
 import AppsIcon from '@mui/icons-material/Apps';
 import React from 'react'
 import Filter from '../RestaurantsPage/Filter';
+import Menu from './Menu';
 
 function BellaItalia() {
 
@@ -223,7 +224,9 @@ function BellaItalia() {
                                         <img src={item.clockImg} alt="Clock" />
                                         <p className=' font-semibold text-white'>{item.date}</p>
                                     </div>
-                                    <img className='absolute left-[50%] top-[90%]' src={item.menuImage} alt="" />
+                                    <div className='absolute left-[50%] top-[90%]' >
+                                        <Menu/>
+                                    </div>
                                 </div>
                             ))
                         }
@@ -235,10 +238,10 @@ function BellaItalia() {
                 <h1 className='text-[#1E1E1E] text-[34px] font-semibold px-2'>Discover our magnificent place in photos</h1>
                 <p className='text-[#5E5E5E] max-w-[601px] pt-2 px-3'>The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing.</p>
 
-                <div className='mt-5 flex flex-col md:flex-row items-center justify-center gap-2'>
+                <div className='w-[80%] mx-auto mt-5 flex flex-col md:flex-row  gap-2'>
 
                     <div className="relative w-full lg:w-1/2 flex flex-col  justify-end" >
-                        <img className='' src="public/D1.png" alt="" />
+                        <img className='object-cover' src="public/D1.png" alt="" />
                         <div className='absolute text-white pb-5 pl-12'>
                             <button className='flex items-center gap-3 font-semibold px-6 py-2 bg-white hover:bg-gray-100 transition rounded-full text-black'>
                                 <AppsIcon />
