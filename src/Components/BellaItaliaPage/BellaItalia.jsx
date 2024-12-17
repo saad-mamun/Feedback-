@@ -1,6 +1,7 @@
 import { imageListClasses, Rating } from '@mui/material'
 import AppsIcon from '@mui/icons-material/Apps';
 import React from 'react'
+import Filter from '../RestaurantsPage/Filter';
 
 function BellaItalia() {
 
@@ -30,37 +31,60 @@ function BellaItalia() {
 
     const Informations = [
         {
-            img:"public/Menu.png",
-            heading:"See the menu"
+            img: "public/Menu.png",
+            heading: "See the menu"
         },
         {
-            img:"public/Call.png",
-            heading:"+847 87 37 29 01"
+            img: "public/Call.png",
+            heading: "+847 87 37 29 01"
         },
         {
-            img:"public/Location.png",
-            heading:"Singapour, Bishan"
+            img: "public/Location.png",
+            heading: "Singapour, Bishan"
         },
         {
-            img:"public/Clock.png",
-            heading:"7j/7, 08:00 - 22:00"
+            img: "public/Clock.png",
+            heading: "7j/7, 08:00 - 22:00"
         },
         {
-            img:"public/Web.png",
-            heading:"www.bellaitalia.com"
+            img: "public/Web.png",
+            heading: "www.bellaitalia.com"
         },
     ];
 
     const icons = [
         {
-            icon1:"public/Facebook.png",
-            icon2:"public/Instagram.png",
-            icon3:"public/Tiktok.png",
-            icon4:"public/Whatsapp.png",
+            icon1: "public/Facebook.png",
+            icon2: "public/Instagram.png",
+            icon3: "public/Tiktok.png",
+            icon4: "public/Whatsapp.png",
         }
     ];
 
 
+    const Ratings = [
+        {
+            title: "5 stars",
+            img: "public/5star.png"
+        },
+        {
+            title: "0 stars",
+            img: "public/4star.png"
+        },
+        {
+            title: "0 stars",
+            img: "public/3star.png"
+        },
+        {
+            title: "0 stars",
+            img: "public/2star.png"
+        },
+        {
+            title: "0 stars",
+            img: "public/1star.png"
+        },
+
+    ]
 
 
 
@@ -103,7 +127,7 @@ function BellaItalia() {
                     </div>
                 </div>
             </div>
-
+            {/* Discover */}
             <div className="container mx-auto mt-12">
                 <h1 className='text-[#1E1E1E] text-[34px] font-semibold px-2'>Discover our magnificent place in photos</h1>
                 <p className='text-[#5E5E5E] max-w-[601px] pt-2 px-3'>The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing.</p>
@@ -114,7 +138,7 @@ function BellaItalia() {
                         <img className='' src="public/D1.png" alt="" />
                         <div className='absolute text-white pb-5 pl-12'>
                             <button className='flex items-center gap-3 font-semibold px-6 py-2 bg-white hover:bg-gray-100 transition rounded-full text-black'>
-                                <AppsIcon/>
+                                <AppsIcon />
                                 View all photos (7)
                             </button>
                         </div>
@@ -138,37 +162,86 @@ function BellaItalia() {
                     </div>
                 </div>
             </div>
-
-            <div className='container mx-auto flex flex-col md:flex-row justify-between gap-6 mt-24 px-3'>
-                <div>
-                    <h1 className='text-[#1E1E1E] text-[32px] font-semibold mb-5 lg:mb-8'>More Informations</h1>
-                    <div className='space-y-5'>
-                        {
-                            Informations.map((data, index) => (
-                                <div key={index} className='flex items-center gap-3 lg:gap-12 cursor-pointer'>
-                                    <img src={data.img} alt="icons" />
-                                    <h2 className='text-[20px] text-[#232323] font-medium border-b-2 hover:border-orange-400 transition'>{data.heading}</h2>
-                                </div>
-                            ))
-                        }
+            {/* More Informations */}
+            <div className='container mx-auto '>
+                <div className=' flex flex-col md:flex-row justify-between gap-6 mt-24 px-3'>
+                    <div>
+                        <h1 className='text-[#1E1E1E] text-[32px] font-semibold mb-5 lg:mb-8'>More Informations</h1>
+                        <div className='space-y-5'>
+                            {
+                                Informations.map((data, index) => (
+                                    <div key={index} className='flex items-center gap-3 lg:gap-12 cursor-pointer'>
+                                        <img src={data.img} alt="icons" />
+                                        <h2 className='text-[20px] text-[#232323] font-medium border-b-2 hover:border-orange-400 transition'>{data.heading}</h2>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        <div className='mt-5 lg:mt-12'>
+                            {
+                                icons.map((icon, index) => (
+                                    <div key={index} className='flex items-center gap-5 lg:gap-12'>
+                                        <img src={icon.icon1} alt="Facebook" />
+                                        <img src={icon.icon2} alt="Instagram" />
+                                        <img src={icon.icon3} alt="Toktok" />
+                                        <img src={icon.icon4} alt="Whatsapp" />
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
-                    <div className='mt-5 lg:mt-12'>
+                    <div>
+                        <img src="public/Map2.png" alt="" />
+                    </div>
+                </div>
+                <hr className='mt-7' />
+            </div>
+
+            <div className='container mx-auto px-4 mt-8'>
+                <div className='flex flex-col md:flex-row items-start  gap-3 lg:gap-12'>
+                    <div className='flex items-start justify-center gap-3 lg:gap-12'>
+                        <div>
+                            <img src="public/Overall.png" alt="Rating" />
+                        </div>
+
+                        <div>
+                            <h1 className='text-[#232323] text-[24px] lg:text-[32px] font-bold'>Overall rating</h1>
+                            <p className='text-[#838383] text-[19px]'>834 Reviews</p>
+                            <div className='flex gap-1 items-center mt-3'>
+                                <img src="public/Ystar.png" alt="star" />
+                                <img src="public/Ystar.png" alt="star" />
+                                <img src="public/Ystar.png" alt="star" />
+                                <img src="public/Ystar.png" alt="star" />
+                                <img src="public/Ystar.png" alt="star" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
                         {
-                            icons.map((icon, index) => (
-                                <div key={index} className='flex items-center gap-5 lg:gap-12'>
-                                    <img src={icon.icon1} alt="Facebook" />
-                                    <img src={icon.icon2} alt="Instagram" />
-                                    <img src={icon.icon3} alt="Toktok" />
-                                    <img src={icon.icon4} alt="Whatsapp" />
+                            Ratings.map((item, index) => (
+                                <div key={index} className='flex items-center gap-5'>
+                                    <h1 className='font-bold'>{item.title}</h1>
+                                    <img className='w-[250px] md:w-[380px] lg:w-[487px]' src={item.img} alt="" />
                                 </div>
                             ))
                         }
                     </div>
                 </div>
+                <hr className='mt-6' />
+            </div>
+
+            <div className='container mx-auto px-4 mt-6'>
+                <div className='flex items-center gap-10'>
+                    <Filter/>
+                    <Filter/>
+                </div>
                 <div>
-                    <img src="public/Map2.png" alt="" />
+                    
                 </div>
             </div>
+
+
         </section>
     )
 }
