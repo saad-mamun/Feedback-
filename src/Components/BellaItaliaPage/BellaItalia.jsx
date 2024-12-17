@@ -84,7 +84,110 @@ function BellaItalia() {
             img: "public/1star.png"
         },
 
+    ];
+
+    const users = [
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+        {
+            img: "public/User.png",
+            username: "Wei Jie",
+            location: "Singapore, Little india",
+            rating: "public/Ystar.png",
+            date: "29/11/2023",
+            desc: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout."
+        },
+    ];
+
+    const discovers = [
+        {
+            img:"public/Thesnug.png",
+            title:"The melt",
+            disc:"The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            rating:"public/Ystar.png",
+            ratingPoint:"5.0",
+            review:"(334 reviews)"
+        },
+        {
+            img:"public/Lokma.png",
+            title:"Lokma",
+            disc:"The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            rating:"public/Ystar.png",
+            ratingPoint:"5.0",
+            review:"(334 reviews)"
+        },
+        {
+            img:"public/Thesnug.png",
+            title:"The snug",
+            disc:"The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+            rating:"public/Ystar.png",
+            ratingPoint:"5.0",
+            review:"(334 reviews)"
+        },
     ]
+
 
 
 
@@ -230,17 +333,74 @@ function BellaItalia() {
                 </div>
                 <hr className='mt-6' />
             </div>
-
+            {/* filtering */}
             <div className='container mx-auto px-4 mt-6'>
                 <div className='flex items-center gap-10'>
-                    <Filter/>
-                    <Filter/>
+                    <Filter />
+                    <Filter />
                 </div>
-                <div>
-                    
+                <div className=' space-y-4 mt-6'>
+                    {
+                        users.map((user, index) => (
+                            <div key={index} className='flex items-start bg-[#F8F8F8] hover:bg-[#ebe7e7] transition cursor-pointer p-3 gap-6 rounded-xl'>
+                                <img className="p-4 bg-white rounded-full" src={user.img} alt="" />
+                                <div>
+                                    <h1 className='text-[#232323] text-[22px] font-semibold'>{user.username}</h1>
+                                    <p className='text-[#5E5E5E]'>{user.location}</p>
+                                    <div className='flex items-center gap-3 mt-3'>
+                                        <div className='flex items-center gap-1'>
+                                            <img src={user.rating} alt="rating" />
+                                            <img src={user.rating} alt="rating" />
+                                            <img src={user.rating} alt="rating" />
+                                            <img src={user.rating} alt="rating" />
+                                            <img src={user.rating} alt="rating" />
+                                        </div>
+                                        <p>{user.date}</p>
+                                    </div>
+                                    <div className='mt-7'>
+                                        <p className='max-w-[511px] text-[#5E5E5E]'>{user.desc}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+                <div className='mt-8 text-center'>
+                    <button className='text-white bg-[#1677BD] hover:bg-[#157eca] transition cursor-pointer px-6 py-2 rounded-full '>Show more reviews</button>
                 </div>
             </div>
 
+            {/* Discover section */}
+            <div className='container mx-auto px-3 mt-6'>
+                <h1 className='text-[#1E1E1E] text-[32px] font-bold'>Also discover...</h1>
+                <div className='w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-6 mt-6'>
+                    {
+                        discovers.map((item, index)=>(
+                            <div key={index} className='bg-[#F8F8F8] hover:bg-[#fff6f6] transition rounded-xl'>
+                                <img className='w-full object-cover' src={item.img} alt="cd" />
+                                <div className='p-4'>
+                                    <h1 className='text-[#232323] text-[21px]'>{item.title}</h1>
+                                    <p className='max-w-[280px] text-[#8F8F8F]'>{item.disc}</p>
+                                    <div className='flex items-center gap-2 mt-4'>
+                                        <div className='flex items-center gap-1'>
+                                            <img src={item.rating} alt="rating" />
+                                            <img src={item.rating} alt="rating" />
+                                            <img src={item.rating} alt="rating" />
+                                            <img src={item.rating} alt="rating" />
+                                            <img src={item.rating} alt="rating" />
+                                        </div>
+                                        <div className='flex items-center gap-3'>
+                                            <p className='font-bold'>{item.ratingPoint}</p>
+                                            <p>{item.review}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+                <hr className='mt-8' />
+            </div>
 
         </section>
     )
